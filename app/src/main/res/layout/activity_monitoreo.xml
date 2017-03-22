@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/item_header"
+        android:layout_width="359dp"
+        android:layout_height="17dp"
+        android:background="@color/colorPrimaryLight"
+        android:textColor="@color/colorPrimaryText"
+        android:gravity="center"
+        android:text="Lista Monitoreo"
+        tools:layout_conversion_absoluteX="0dp"
+        tools:layout_conversion_absoluteY="0dp"
+        tools:layout_conversion_absoluteWidth="360dp"
+        tools:layout_conversion_absoluteHeight="16dp"
+        android:layout_marginRight="44dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintHorizontal_bias="0.137"
+        android:layout_marginBottom="110dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_unit" />
+
+    <LinearLayout
+        android:id="@+id/lin"
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        android:weightSum="12"
+        tools:layout_conversion_absoluteX="0dp"
+        tools:layout_conversion_absoluteY="16dp"
+        tools:layout_conversion_absoluteWidth="360dp"
+        tools:layout_conversion_absoluteHeight="16dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:layout_editor_absoluteX="33dp">
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_unit"
+        android:layout_width="52dp"
+        android:layout_height="16dp"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:text="Fecha"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/tv_itemCode"
+        android:layout_marginLeft="38dp"
+        android:layout_marginTop="110dp"
+        app:layout_constraintTop_toBottomOf="@+id/lin" />
+
+    <TextView
+        android:id="@+id/tv_itemCode"
+        android:layout_width="71dp"
+        android:layout_height="16dp"
+        android:layout_weight="4.21"
+        android:gravity="center"
+        android:text="Cédula"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textStyle="bold"
+        android:layout_marginTop="110dp"
+        app:layout_constraintTop_toBottomOf="@+id/item_header"
+        android:layout_marginLeft="45dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_itemName"
+        android:layout_width="94dp"
+        android:layout_height="16dp"
+        android:layout_weight="5"
+        android:gravity="center"
+        android:text="Operación"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@+id/tv_unit"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.227"
+        android:layout_marginTop="110dp"
+        app:layout_constraintTop_toBottomOf="@+id/lin" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="121dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Filtrar por cédula"
+        android:inputType="text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        app:layout_constraintBottom_toTopOf="@+id/tv_unit"
+        app:layout_constraintHorizontal_bias="0.165"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.869" />
+
+    <ListView
+        android:id="@+id/items"
+        android:layout_width="329dp"
+        android:layout_height="353dp"
+        android:layout_marginTop="13dp"
+        android:choiceMode="singleChoice"
+        android:dividerHeight="1dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_unit"
+        tools:layout_conversion_absoluteHeight="477dp"
+        tools:layout_conversion_absoluteWidth="354dp"
+        tools:layout_conversion_absoluteX="3dp"
+        tools:layout_conversion_absoluteY="33dp"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.533">
+
+    </ListView>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="97dp"
+        android:layout_height="111dp"
+        app:srcCompat="@drawable/welcome"
+        app:layout_constraintLeft_toRightOf="@+id/editText2"
+        android:layout_marginLeft="114dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/lin"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/items"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total hoy:"
+        android:layout_marginTop="9dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        android:layout_marginLeft="-8dp"
+        app:layout_constraintLeft_toLeftOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:text="Total este mes:"
+        app:layout_constraintLeft_toLeftOf="@+id/editText2"
+        app:layout_constraintTop_toTopOf="@+id/item_header"
+        android:layout_marginTop="26dp" />
+
+    <TextView
+        android:id="@+id/mes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintLeft_toRightOf="@+id/textView10"
+        app:layout_constraintTop_toTopOf="@+id/item_header"
+        android:layout_marginTop="26dp" />
+
+    <TextView
+        android:id="@+id/hoy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toRightOf="@+id/textView9"
+        android:layout_marginTop="9dp"
+        app:layout_constraintTop_toBottomOf="@+id/mes" />
+
+</android.support.constraint.ConstraintLayout>
